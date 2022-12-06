@@ -1,5 +1,8 @@
-TODO URL = "https://www.youtube.com/watch?v=71AsYo2q_0Y&t=2563s"
+TODO URL = https://www.youtube.com/watch?v=71AsYo2q_0Y&t=2564s
 
-TODO              I am on 00:00 / 6:44:19
+TODO             1:26:08 / 6:44:19
+
+                 •
+                 Create a new Row layout widget
 
 TODO: Just coading along in 4.00 speed not listening to the lecture...
