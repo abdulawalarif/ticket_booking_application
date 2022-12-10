@@ -1,8 +1,5 @@
 TODO URL = https://www.youtube.com/watch?v=71AsYo2q_0Y&t=2564s
 
-TODO             1:39:08 / 6:44:19
-
-                 •
-                 create a new file ticket_view.dart
+TODO             1:47:02 / 6:44:19
 
 TODO: Just coading along in 4.00 speed not listening to the lecture...
