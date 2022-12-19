@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 import 'package:ticket_booking_application/utils/app_info_list.dart';
 import '../utils/app_layout.dart';
 import '../utils/app_style.dart';
+import '../widgets/double_text_widget.dart';
 import 'hotel_screen.dart';
 import 'ticket_view.dart';
 
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
+            padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
             child: Column(
               children: [
                 Gap(AppLayout.getHeight(20)),
@@ -45,8 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     Container(
-                      height: 50,
-                      width: 50,
+                      height: AppLayout.getHeight(50),
+                      width: AppLayout.getWidth(50),
                       decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.circular(AppLayout.getHeight(15)),
@@ -65,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           BorderRadius.circular(AppLayout.getHeight(10)),
                       color: const Color(0xFFF4F6FD)),
                   padding: EdgeInsets.symmetric(
-                      horizontal: AppLayout.getHeight(12),
+                      horizontal: AppLayout.getWidth(12),
                       vertical: AppLayout.getHeight(12)),
                   child: Row(
                     children: [
@@ -81,25 +82,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Gap(AppLayout.getHeight(40)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcomming Flights",
-                      style: Styles.headLineStyle2,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        print("Tapped View all");
-                      },
-                      child: Text(
-                        "View all",
-                        style: Styles.textStyle
-                            .copyWith(color: Styles.primaryColor),
-                      ),
-                    )
-                  ],
-                )
+                const AppDoubleTextWidget(
+                    bigText: "Upcomming Flights", smallText: "View all"),
               ],
             ),
           ),
@@ -116,26 +100,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Gap(AppLayout.getHeight(15)),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: Styles.headLineStyle2,
-                ),
-                InkWell(
-                  onTap: () {
-                    print("Tapped View all");
-                  },
-                  child: Text(
-                    "View all",
-                    style:
-                        Styles.textStyle.copyWith(color: Styles.primaryColor),
-                  ),
-                )
-              ],
-            ),
+            padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
+            child: const AppDoubleTextWidget(
+                bigText: "Hotels", smallText: "View all"),
           ),
           Gap(AppLayout.getHeight(15)),
           // Hotels Screen
