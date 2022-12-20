@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ticket_booking_application/screens/home_screen.dart';
 
 import 'search_screen.dart';
+import 'ticket_screen.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class _BottomBarState extends State<BottomBar> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
     const SearchScreen(),
-    const Text("Tickets"),
+    const TickeScreen(),
     const Text("Profile"),
   ];
   // For navigating between widgets of selection on the bottom bar..
