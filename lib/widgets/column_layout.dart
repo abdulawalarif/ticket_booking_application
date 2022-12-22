@@ -8,12 +8,14 @@ class AppColumnLayout extends StatelessWidget {
 
   final String firstText;
   final String secondText;
-  const AppColumnLayout(
-      {Key? key,
-      required this.firstText,
-      required this.secondText,
-      required this.alignment})
-      : super(key: key);
+  final bool? isColor;
+  const AppColumnLayout({
+    Key? key,
+    required this.firstText,
+    required this.secondText,
+    required this.alignment,
+    this.isColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +24,16 @@ class AppColumnLayout extends StatelessWidget {
       children: [
         Text(
           firstText,
-          style: Styles.headLineStyle3,
+          style: isColor == null
+              ? Styles.headLineStyle3.copyWith(color: Colors.white)
+              : Styles.headLineStyle3,
         ),
         Gap(AppLayout.getHeight(5)),
         Text(
           secondText,
-          style: Styles.headLineStyle3,
+          style: isColor == null
+              ? Styles.headLineStyle4.copyWith(color: Colors.white)
+              : Styles.headLineStyle4,
         ),
       ],
     );
