@@ -1,7 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_booking_application/screens/home_screen.dart';
-
+import 'package:ticket_booking_application/screens/profile_screen.dart';
 import 'search_screen.dart';
 import 'ticket_screen.dart';
 
@@ -18,7 +18,7 @@ class _BottomBarState extends State<BottomBar> {
     const HomeScreen(),
     const SearchScreen(),
     const TickeScreen(),
-    const Text("Profile"),
+    const ProfileScreen(),
   ];
   // For navigating between widgets of selection on the bottom bar..
   void _onItemTapped(int index) {
